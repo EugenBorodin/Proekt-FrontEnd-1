@@ -1,49 +1,55 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
 }
 
 .title-wrapper {
-    text-align: center;
+  display: inline-block;
+  padding: 10px;
 }
 
 h1 {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-    color: #333;
-    margin-top: 20px;
-    background-color: #e7b7b7;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e7b7b7;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #weather-info {
-    border: 1px solid black;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #ec7f7f;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ec7f7f;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.weather-details {
+  margin-left: 20px;
 }
 
 #weather-icon {
-    font-size: 64px;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
+  font-size: 48px;
+  margin-bottom: 10px;
 }
 
 #weather-description {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 10px;
+  font-weight: bold;
 }
 
-#temperature {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
+#temperature,
+#humidity,
+#wind-speed,
+#pressure {
+  margin-top: 5px;
 }
