@@ -1,29 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Погода</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="title-wrapper">
-    <h1>Weather in <span id="city-name"></span></h1>
-  </div>
-
-  <div id="weather-info">
-    <i id="weather-icon" class="fas"></i>
-    <div class="weather-details">
-      <p id="weather-description"></p>
-      <p id="temperature"></p>
-      <p id="humidity"></p>
-      <p id="wind-speed"></p>
-      <p id="pressure"></p>
+  <div id="header">
+    <div class="date-time">
+      <i id="clock-icon" class="far fa-clock"></i>
+      <span id="current-date"></span>
     </div>
   </div>
-
-  <script src="script.js"></script>
+  <div id="content">
+    <h1>Weather in <span id="city-name"></span></h1>
+    <div id="weather-info">
+      <div id="weather-icon" class="fas fa-question"></div>
+      <div class="weather-details">
+        <p id="weather-description"></p>
+        <p id="temperature"></p>
+        <p id="humidity"></p>
+        <p id="wind-speed"></p>
+        <p id="pressure"></p>
+      </div>
+    </div>
+    <ul id="forecast-list"></ul>
+  </div>
 </body>
 </html>

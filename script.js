@@ -59,6 +59,10 @@ async function getWeatherData(latitude, longitude) {
 
     const pressureElement = document.getElementById('pressure');
     pressureElement.textContent = `Pressure: ${pressure} hPa`;
+
+    // Добавляем иконку с текущей датой и временем
+    const currentDateTimeElement = document.getElementById('current-date');
+    currentDateTimeElement.textContent = getCurrentDateTime();
   } catch (error) {
     console.log('Произошла ошибка при получении данных о погоде', error);
   }
@@ -98,4 +102,10 @@ function getWeatherIconClass(iconCode) {
     default:
       return 'question';
   }
+}
+
+function getCurrentDateTime() {
+  const currentDate = new Date();
+  const options = { weekday: 'long', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+  return currentDate.toLocaleString('en-US', options);
 }

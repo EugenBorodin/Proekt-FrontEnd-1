@@ -1,8 +1,28 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+  background-color: rgb(132, 142, 136);
   margin: 0;
   padding: 20px;
+}
+
+#header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.date-time {
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 14px;
+}
+
+#clock-icon {
+  margin-right: 5px;
+}
+
+#current-date {
+  font-weight: bold;
 }
 
 .title-wrapper {
@@ -11,16 +31,17 @@ body {
 }
 
 h1 {
-  border: 1px solid black;
+  display: inline-block;
   padding: 10px;
   text-align: center;
   color: #333;
   margin-top: 20px;
-  padding: 10px;
   background-color: #e7b7b7;
+  border: 2px solid #333;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 #weather-info {
   border: 1px solid black;
