@@ -33,10 +33,16 @@ function getWeatherData(latitude, longitude) {
       const temperatureInKelvin = data.main.temp;
       const temperatureInCelsius = temperatureInKelvin - 273.15; // Преобразование в градусы Цельсия
       const description = data.weather[0].description;
-      const weatherInfo = `Температура: ${temperatureInCelsius.toFixed(2)}°C, ${description}`;
+      const weatherIcon = data.weather[0].icon;
 
-      const weatherInfoElement = document.getElementById('weather-info');
-      weatherInfoElement.textContent = weatherInfo;
+      const weatherIconElement = document.getElementById('weather-icon');
+      weatherIconElement.className = `wi wi-owm-${weatherIcon}`;
+
+      const weatherDescriptionElement = document.getElementById('weather-description');
+      weatherDescriptionElement.textContent = description;
+
+      const temperatureElement = document.getElementById('temperature');
+      temperatureElement.textContent = `Температура: ${temperatureInCelsius.toFixed(2)}°C`;
     })
     .catch(error => {
       console.log('Произошла ошибка при получении данных о погоде', error);

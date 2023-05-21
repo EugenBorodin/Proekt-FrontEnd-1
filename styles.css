@@ -3,32 +3,47 @@ body {
     background-color: #f2f2f2;
     margin: 0;
     padding: 20px;
-  }
-  
-  h1 {
+}
+
+.title-wrapper {
+    text-align: center;
+}
+
+h1 {
     border: 1px solid black;
     padding: 10px;
     text-align: center;
     color: #333;
     margin-top: 20px;
-    padding: 10px;
     background-color: #e7b7b7;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  .title-wrapper {
-    display: inline-block;
-    padding: 10px;
-  }
-  
-  #weather-info {
+#weather-info {
     border: 1px solid black;
     padding: 10px;
     margin-top: 20px;
-    padding: 10px;
     background-color: #ec7f7f;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
+}
+
+#weather-icon {
+    font-size: 64px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#weather-description {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#temperature {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
