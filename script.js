@@ -16,11 +16,12 @@ window.addEventListener('load', () => {
 
   
     fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => {
-        const temperature = data.main.temp;
-        const description = data.weather[0].description;
-        const weatherInfo = `Температура: ${temperature}°C, ${description}`;
+  .then(response => response.json())
+  .then(data => {
+    const temperatureInKelvin = data.main.temp;
+    const temperatureInCelsius = temperatureInKelvin - 273.15; // Преобразование в градусы Цельсия
+    const description = data.weather[0].description;
+    const weatherInfo = `Температура: ${temperatureInCelsius.toFixed(2)}°C, ${description}`;
   
         const weatherInfoElement = document.getElementById('weather-info');
         weatherInfoElement.textContent = weatherInfo;
