@@ -4,10 +4,7 @@
   <meta charset="UTF-8">
   <title>Погода</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
-
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/weather-icons/css/weather-icons.min.css">
 </head>
 <body>
   <div id="header">
@@ -19,7 +16,7 @@
   <div id="content">
     <h1>Weather in <span id="city-name"></span></h1>
     <div id="weather-info">
-      <div id="weather-icon" class="fas fa-question"></div>
+      <div id="weather-icon" class="wi"></div>
       <div class="weather-details">
         <p id="weather-description"></p>
         <p id="temperature"></p>
@@ -30,5 +27,20 @@
     </div>
     <ul id="forecast-list"></ul>
   </div>
+  <div id="clock" class="clock">
+    <div id="time"></div>
+    <div id="calendar"></div>
+  </div>
+  
+  <div id="sidebar">
+    <div class="button-link">
+      <a href="https://www.ait-tr.de/" target="_blank">Ait-Tr.de</a>
+    </div>
+    <div class="button-link">
+      <a href="https://google.de" target="_blank">Google</a>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>

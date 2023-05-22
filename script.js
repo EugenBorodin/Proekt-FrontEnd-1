@@ -43,7 +43,7 @@ async function getWeatherData(latitude, longitude) {
     const pressure = data.main.pressure;
 
     const weatherIconElement = document.getElementById('weather-icon');
-    weatherIconElement.className = `fas fa-${getWeatherIconClass(weatherIcon)}`;
+    weatherIconElement.className = `wi ${getWeatherIconClass(weatherIcon)}`;
 
     const weatherDescriptionElement = document.getElementById('weather-description');
     weatherDescriptionElement.textContent = description;
@@ -71,36 +71,36 @@ async function getWeatherData(latitude, longitude) {
 function getWeatherIconClass(iconCode) {
   switch (iconCode) {
     case '01d':
-      return 'sun';
+      return 'wi-day-sunny';
     case '01n':
-      return 'moon';
+      return 'wi-night-clear';
     case '02d':
-      return 'cloud-sun';
+      return 'wi-day-cloudy';
     case '02n':
-      return 'cloud-moon';
+      return 'wi-night-alt-cloudy';
     case '03d':
     case '03n':
-      return 'cloud';
+      return 'wi-cloud';
     case '04d':
     case '04n':
-      return 'clouds';
+      return 'wi-cloudy';
     case '09d':
     case '09n':
-      return 'cloud-rain';
+      return 'wi-rain';
     case '10d':
     case '10n':
-      return 'cloud-showers-heavy';
+      return 'wi-day-rain';
     case '11d':
     case '11n':
-      return 'bolt';
+      return 'wi-thunderstorm';
     case '13d':
     case '13n':
-      return 'snowflake';
+      return 'wi-snow';
     case '50d':
     case '50n':
-      return 'smog';
+      return 'wi-fog';
     default:
-      return 'question';
+      return 'wi-na';
   }
 }
 
