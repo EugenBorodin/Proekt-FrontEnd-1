@@ -5,6 +5,13 @@
   <title>Погода</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/weather-icons/css/weather-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
+  <style>
+    #map {
+      height: 400px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
   <div id="header">
@@ -15,7 +22,9 @@
   </div>
   <div id="content">
     <h1>Weather in <span id="city-name"></span></h1>
+    
     <div id="weather-info">
+      
       <div id="weather-icon" class="wi"></div>
       <div class="weather-details">
         <p id="weather-description"></p>
@@ -23,7 +32,9 @@
         <p id="humidity"></p>
         <p id="wind-speed"></p>
         <p id="pressure"></p>
+        
       </div>
+      <div id="map"></div>
     </div>
     <ul id="forecast-list"></ul>
   </div>
@@ -41,6 +52,9 @@
     </div>
   </div>
 
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
   <script src="script.js" defer></script>
 </body>
 </html>

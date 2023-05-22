@@ -1,3 +1,30 @@
+let map;
+
+function initMap() {
+  if ('geolocation' in navigator) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+        map = L.map('map').setView([latitude, longitude], 12);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+          maxZoom: 18,
+        }).addTo(map);
+
+        L.marker([latitude, longitude]).addTo(map);
+      },
+      (error) => {
+        console.log('Произошла ошибка при получении геолокации', error);
+      }
+    );
+  } else {
+    console.log('Геолокация не поддерживается');
+  }
+}
+
 const apiKey = '202de8081502510023b44b019f095d45';
 
 window.addEventListener('load', () => {
@@ -100,12 +127,21 @@ function getWeatherIconClass(iconCode) {
     case '50n':
       return 'wi-fog';
     default:
-      return 'wi-na';
+      return 'wi-day-sunny';
   }
 }
 
 function getCurrentDateTime() {
-  const currentDate = new Date();
-  const options = { weekday: 'long', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
-  return currentDate.toLocaleString('en-US', options);
+  const now = new Date();
+  const options = {
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: false,
+  };
+  return now.toLocaleDateString('en-US', options);
 }
+
+initMap();
