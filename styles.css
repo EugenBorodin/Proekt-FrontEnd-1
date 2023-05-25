@@ -137,3 +137,10 @@ h1 {
   background-color: #bfb4b4;
 }
 
+@media (max-width: 480px) {
+  
+}
+
+@media (min-width: 481px) {
+  
+}
