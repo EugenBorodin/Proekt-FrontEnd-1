@@ -12,7 +12,7 @@ Leaflet (библиотека для работы с картами)
 Weather Icons (иконки погоды)
 Установка и запуск
 Склонируйте репозиторий на свой компьютер:
-git clone https://github.com/your-username/weather-app.git
+git clone git@github.com:EugenBorodin/Proekt-FrontEnd-1.git
 
 Перейдите в папку проекта:
 
