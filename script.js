@@ -25,6 +25,7 @@ function initMap() {
   }
 }
 
+
 const apiKey = '202de8081502510023b44b019f095d45';
 
 window.addEventListener('load', () => {
